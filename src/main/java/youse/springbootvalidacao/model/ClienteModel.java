@@ -12,14 +12,16 @@ import javax.validation.constraints.Pattern;
 public class ClienteModel {
 
     private String id;
-    @NotBlank
-    @Pattern(regexp = "^[A-Z]+(.)*")
+    @NotBlank(message = "Campo não informado")
+    @Pattern(regexp = "^[A-Z]+(.)*", message = "Campo nome deve inciar com letra maiúscula")
     private String nome;
-    @Email
+    @Email(message = "Campo inválido")
+    @NotBlank(message = "Campo não informado")
     private String email;
-    @CPF
+    @CPF(message = "Campo inválido")
+    @NotBlank(message = "Campo não informado")
     private String cpf;
-    @NotBlank
-    @PlacaCarro
+    @NotBlank(message = "Campo não informado")
+    @PlacaCarro(message = "Campo inválido")
     private String placaCarro;
 }
