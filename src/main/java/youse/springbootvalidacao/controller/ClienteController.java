@@ -16,8 +16,8 @@ import java.util.Map;
 public class ClienteController {
 
     @PostMapping("/salvar")
-    private ResponseEntity<String> salvar(@RequestBody @Valid ClienteModel cliente) {
-        return ResponseEntity.ok("Cliente válido" + cliente.toString());
+    private ResponseEntity<ClienteModel> salvar(@RequestBody @Valid ClienteModel cliente) {
+        return ResponseEntity.ok(cliente);
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
