@@ -25,9 +25,9 @@ public class SpringBootValidacaoApplication {
 		RestTemplate template = new RestTemplate();
 
 		Map<String, String> params = new HashMap<String, String>();
-		params.put("nome", "Yago");
-		params.put("cpf", "049.591.733-86");
-		params.put("email", "yagocx12329@gmail.com");
+		params.put("nome", "exmaple");
+		params.put("cpf", "000.000.000-00");
+		params.put("email", "example@gmail.com");
 		params.put("placaCarro", "abc1234");
 		ResponseEntity<ClienteModel> entity = template.postForEntity("http://localhost:8080/api/cliente/salvar",params,
 				ClienteModel.class);
